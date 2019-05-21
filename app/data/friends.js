@@ -9,7 +9,7 @@ var friendArray = [
 
   {
     "name": "Joey",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo": "http://images4.fanpop.com/image/answers/1083000/1083358_1289612957253.39res_375_456.jpg",
     "scores": [
       5,
       1,
@@ -25,23 +25,23 @@ var friendArray = [
   },
   {
     "name": "Bill",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo": "https://randommization.com/wp-content/uploads/2013/01/invisible-inner-illustrations_4.jpg",
     "scores": [
-      6,
       1,
-      4,
-      4,
-      9,
       1,
-      2,
-      4,
-      4,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
       1
     ]
   },
   {
     "name": "Andrew",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo": "https://cdn.pastemagazine.com/www/blogs/lists/2010/05/13/charlie_brown.jpg",
     "scores": [
       3,
       2,
@@ -57,7 +57,7 @@ var friendArray = [
   },
   {
     "name": "John",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo": "https://www.thoughtco.com/thmb/rkFZRh7wSN8BjubVvIkrdsh2tGo=/1367x875/filters:no_upscale():max_bytes(150000):strip_icc()/powerpuff_girls-56a00bc45f9b58eba4aea61d.jpg",
     "scores": [
       3,
       4,
@@ -73,7 +73,7 @@ var friendArray = [
   },
   {
     "name": "Susan",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo": "http://www.teapotcartoon.com/images/teapot-1.jpg",
     "scores": [
       4,
       3,

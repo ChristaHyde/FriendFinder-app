@@ -12,6 +12,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head>
+<style>
+  .match-photo {
+    width: 300px;
+    height: 300px;
+  }
+</style>
 
 <body>
 
@@ -180,7 +186,8 @@
               </button>
             </div>
             <div class="modal-body">
-              ...
+              <h1 class="match-name"></h1>
+              <img class="match-photo" />
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -196,7 +203,7 @@
 
     <script type="text/javascript">
 
-      $(".submit").on("click", function () {
+      $("#submit").on("click", function () {
 
         function validateForm() {
           var isValid = true;
@@ -235,8 +242,10 @@
 
           var currentURL = window.location.origin;
 
-          $.post(currentURL = "/api/friends", userData, function (data) {
-
+          $.post("/api/friends", userData, function (data) {
+            console.log(data);
+            $(".match-name").text(data.matchName);
+            $(".match-photo").attr("src", data.matchPhoto);
             $("#resultsModal").modal("toggle");
             alert("working");
           });

@@ -41,26 +41,35 @@ module.exports = function (app) {
     //   res.json(true);
     // }
     var newFriend = req.body
+
     var totalDifference;
+    var lowestDifference = Infinity;
+    var matchName;
+    var matchPhoto;
     for (var i = 0; i < friendData.length; i++) {
       var currFriend = friendData[i]
+      console.log(currFriend);
       totalDifference = 0;
       for (var j = 0; j < currFriend.scores.length; j++) {
         var currFriendScore = currFriend.scores[j]
-        console.log(currFriendScore);
-        console.log("---");
-        console.log(newFriend.scores);
-        console.log(newFriend.scores[j]);
-        var currentUserScore = userScores[j];
-        totalDifference += Math.abs(parsInt(currentUserScore) - parseInt(currentFriendScore));
-
-
-
-
+        // console.log(currFriendScore);
+        // console.log("---");
+        // console.log(newFriend.scores);
+        // console.log(newFriend.scores[j]);
+        var currentUserScore = newFriend.scores[j];
+        totalDifference += Math.abs(parseInt(currentUserScore) - parseInt(currFriendScore));
       }
-      console.log(friendData[i]);
+      if (totalDifference < lowestDifference) {
+        lowestDifference = totalDifference;
+        matchName = currFriend.name;
+        matchPhoto = currFriend.photo;
+        // console.log(matchName, matchPhoto);
+      }
+      // console.log(friendData[i]);
     }
-    console.log(req.body);
+    // console.log(req.body);
+    console.log(matchName, matchPhoto);
+    res.send({ matchName, matchPhoto });
   });
 
   // ---------------------------------------------------------------------------
